@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="content-section">
+    <form id="post-form" method="POST" action="checkview">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Forum</legend>
+        <label>Thread Title</label><br />
+        <input type="text" name="room_name" id="room_name" width="100px" /><br /><br />
+        <input type="submit" value="Enter Room">
+      </fieldset>
+
+    </form>
+  </div>
+  <div class = "container"> 
+  <!-- {% if det %}
+    <h3>List of available rooms:</h3>
+    <h5>{{det}}</h5>
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+    <tr>
+        {% for dt in det %}
+        <td>{{dt.id}}</td>
+        <td>{{dt.name}}</td>
+    </tr>
+        {% endfor %}
+  </table>
+  {% else %}
+    <h1>No Data</h1>
+  {% endif %} -->
+  <!-- {% for det in details %}
+    <li>{{det.details}}</li>
+  {% endfor %} -->
+    {{detail}}
+  </div>
+{% endblock content %}

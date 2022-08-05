@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container">
+  <!--Form-->
+  <h2 class="my-4">Upload a file to submit (not functioning)</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="upload" accept=".doc, .docx, .pdf, .txt">
+    <br>
+    <button class="btn btn-dark my-4" type="submit">Submit</button>
+  </form>
+
+  <!--See File Uploaded-->
+  <h2 class="my-4">Check Archive</h2>
+  <div class="col-md-4">
+      <a href="{% url 'archiveList' %}" class="btn btn-primary btn-lg btn-block btn-huge">Go</a>
+  </div>
+{% endblock %}

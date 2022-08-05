@@ -1,0 +1,91 @@
+ {% extends "blog/base.html" %}
+ {% load auth_extras %}
+ {% block content %}
+    <div class="container">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Student Centre</legend>
+        </fieldset>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'lprofile' %}" class="btn btn-primary btn-lg btn-block btn-huge">Lecturers Profile</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'logbook' %}" class="btn btn-primary btn-lg btn-block btn-huge">Log Book</a>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'appointment' %}"  class="btn btn-primary btn-lg btn-block btn-huge">Appointment</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'notification' %}" class="btn btn-primary btn-lg btn-block btn-huge">Notification</a>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'uploadPage' %}" class="btn btn-primary btn-lg btn-block btn-huge">Submission</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'archiveList' %}" class="btn btn-primary btn-lg btn-block btn-huge">Archive</a>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'chatHome' %}" class="btn btn-primary btn-lg btn-block btn-huge">Chat</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'forumHome' %}" class="btn btn-primary btn-lg btn-block btn-huge">Forum</a>
+            </div>
+            <br>
+        </div>
+        <br><br>
+        {% if request.user|has_group:"Lecturer" %} 
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Lecturer Centre</legend>
+            </fieldset>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{% url 'sprofile' %}" class="btn btn-success btn-lg btn-block btn-huge">Student Profile</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'schedule' %}" class="btn btn-success btn-lg btn-block btn-huge">Schedule</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{% url 'progression' %}" class="btn btn-success btn-lg btn-block btn-huge">Progression</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'grade' %}" class="btn btn-success btn-lg btn-block btn-huge">Grade</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{% url 'chatHome' %}" class="btn btn-success btn-lg btn-block btn-huge">Chat</a>
+                </div>
+            </div>
+            <br><br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Co-Ordinator Centre</legend>
+            </fieldset>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{% url 'admin:index' %}" class="btn btn-info btn-lg btn-block btn-huge">Admin</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'register' %}" class="btn btn-info btn-lg btn-block btn-huge">Registration</a>
+                </div>
+            </div>
+        {% endif %}
+        <br><br><br>
+    </div>
+ {% endblock content %}
+ 

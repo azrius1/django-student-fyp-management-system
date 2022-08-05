@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="main">
+        <h2 class="my-4">Lecturer's Profile</h2>
+        <ul>
+            <a>Name              : A</a>
+        </ul>
+        <ul>
+            <a>Profile Picture   : <br><br><br><br><br><br><br></a>
+        </ul>
+        <ul>
+            <a>Email             : missa@kdu-online.com</a>
+        </ul>
+        <ul>
+            <a>Academic Position : Program Leader</a>
+        </ul>
+        <ul>
+            <a>Major             : English</a>
+        </ul>
+        <ul>
+            <a>Research          : Beauty of Languages</a>
+        </ul>
+        <ul>
+            <a>Current Project   : Language and The Quest for Identity</a>
+        </ul> 
+        <ul>
+            <a>Lectures          : English For Academic Research, Advanced English</a>
+        </ul>
+        <ul>
+            <a>Area of interest  : Language</a>
+        </ul><br><br>
+        <div class="col-md-4">
+            <a href="{% url 'lprofile' %}" class="btn btn-primary btn-lg btn-block btn-huge">Back</a>
+        </div>
+    </div>
+{% endblock content %}

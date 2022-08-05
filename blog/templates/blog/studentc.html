@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="main">
+        <h2 class="my-4">Student's Profile</h2>
+        <ul>
+            <a>Name              : C</a>
+        </ul>
+        <ul>
+            <a>Profile Picture   : <br><br><br><br><br><br><br></a>
+        </ul>
+        <ul>
+            <a>Email             : 0123456@kdu-online.com</a>
+        </ul>
+        <ul>
+            <a>Programme         : Study in Mathematics</a>
+        </ul>
+        <ul>
+            <a>CGPA              : 3.35 </a>
+        </ul>
+        <ul>
+            <a>FYP Project Title : Polynomials</a>
+        </ul>
+        <ul>
+            <a>Phone Number      : 012-345-6789</a>
+        </ul> 
+        <ul>
+            <a>Supervisor        : Sir B</a>
+        </ul><br><br>
+        <div class="col-md-4">
+            <a href="{% url 'sprofile' %}" class="btn btn-primary btn-lg btn-block btn-huge">Back</a>
+        </div>
+    </div>
+{% endblock content %}

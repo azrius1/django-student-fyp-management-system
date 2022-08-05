@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="container">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Progression (Not Functioning Yet)</legend>
+        </fieldset>
+        <form>
+            <label>Enter the Student ID:
+                <input type="text" name="user">
+            </label>
+            <br>
+            <p>
+                <button>Check Progression (Not working)</button>
+            </p>
+        </form>
+    </div><br><br>
+    <div class="col-md-4">
+        <a href="{% url 'blog-home' %}" class="btn btn-primary btn-lg btn-block btn-huge">Back</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="container">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Logbook</legend>
+        </fieldset>
+        <div class="col-md-4">
+            <a href="{% url 'addlogbook' %}"  class="btn btn-primary btn-lg btn-block btn-huge">Add Logbook</a>
+        </div>
+        <br><br>
+    </div>
+    <div class="container">
+        <ul>
+        {% for logbook in object_list %}
+            <h5 style="border:rgb(0, 0, 0); border-width:1px; border-style:solid;">
+                <li>{{ logbook.date }} - {{ logbook.title }} - {{ logbook.author }}<br/>
+                    <br><p style="margin-left: 40px">{{ logbook.body }}</p>
+                </li> 
+            </h5><br><br>
+        {% endfor %}
+        </ul>
+    </div><br><br>
+    <div class="col-md-4">
+        <a href="{% url 'blog-home' %}" class="btn btn-primary btn-lg btn-block btn-huge">Back</a>
+    </div>
+{% endblock content %}
